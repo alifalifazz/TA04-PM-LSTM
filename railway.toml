@@ -1,6 +1,10 @@
 [build]
 builder = "NIXPACKS"
+buildCommand = "pip install -r requirements.txt"
 
 [variables]
-VIRTUAL_ENV = "/tmp/venv"
+VIRTUAL_ENV = "/opt/venv"
 PIP_CACHE_DIR = "/tmp/.cache/pip"
+
+[deploy]
+startCommand = "gunicorn app:app"
