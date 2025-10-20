@@ -1,0 +1,6 @@
+[build]
+builder = "NIXPACKS"
+
+[variables]
+VIRTUAL_ENV = "/tmp/venv"
+PIP_CACHE_DIR = "/tmp/.cache/pip"
