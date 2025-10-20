@@ -1,0 +1,175 @@
+/* === Global Layout === */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(180deg, #caf0f8 0%, #90e0ef 50%, #00b4d8 100%);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #333;
+    transition: background 0.6s ease;
+}
+
+/* === Main Container === */
+.container {
+    background-color: #ffffff;
+    padding: 40px 55px;
+    border-radius: 22px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    width: 90%;
+    max-width: 520px;
+    animation: fadeIn 0.8s ease;
+    transition: all 0.4s ease-in-out;
+}
+
+/* === Animasi masuk halus === */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* === Heading & Text === */
+h1 {
+    color: #0077b6;
+    margin-bottom: 12px;
+    font-size: 1.9em;
+    font-weight: 700;
+}
+
+.desc {
+    color: #555;
+    margin-bottom: 25px;
+    font-size: 1.05em;
+    line-height: 1.5;
+}
+
+/* === Input & Button === */
+input {
+    width: 80%;
+    padding: 12px 14px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    margin-bottom: 18px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+input:focus {
+    border-color: #00b4d8;
+    box-shadow: 0 0 8px rgba(0, 180, 216, 0.3);
+    outline: none;
+}
+
+button {
+    background: linear-gradient(90deg, #0077b6, #00b4d8);
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 12px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 12px rgba(0, 119, 182, 0.3);
+}
+
+button:hover {
+    background: linear-gradient(90deg, #023e8a, #0077b6);
+    transform: translateY(-2px) scale(1.03);
+    box-shadow: 0 6px 15px rgba(0, 119, 182, 0.4);
+}
+
+/* === Result Card === */
+.result {
+    background-color: #f1f8ff;
+    border-radius: 18px;
+    padding: 25px 20px;
+    margin-top: 25px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.value {
+    color: #d62828;
+    font-weight: 700;
+    font-size: 2.1em;
+}
+
+.info {
+    color: #444;
+    margin-top: 12px;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+/* === Plot Container === */
+.plot-container {
+    margin-top: 28px;
+    background-color: #f8fbff;
+    border-radius: 18px;
+    padding: 18px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.plot-container:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.plot-img {
+    width: 100%;
+    border-radius: 12px;
+    border: 1px solid #ccc;
+}
+
+/* === Buttons & Links === */
+.btn {
+    display: inline-block;
+    background-color: #00b4d8;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+    box-shadow: 0 5px 12px rgba(0, 180, 216, 0.3);
+}
+
+.btn:hover {
+    background-color: #0077b6;
+    transform: scale(1.05);
+}
+
+/* === Error Message === */
+.error {
+    background-color: #ffe5e5;
+    color: #b30000;
+    padding: 12px;
+    border-radius: 10px;
+    margin-top: 15px;
+    font-weight: bold;
+    box-shadow: 0 3px 8px rgba(255, 0, 0, 0.2);
+}
+
+/* === Responsive Design === */
+@media (max-width: 600px) {
+    .container {
+        width: 92%;
+        padding: 25px 20px;
+    }
+    h1 {
+        font-size: 1.5em;
+    }
+    .value {
+        font-size: 1.6em;
+    }
+    button, .btn {
+        padding: 10px 20px;
+        font-size: 15px;
+    }
+}

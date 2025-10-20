@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hasil Prediksi Suhu Udara</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>🌤️ Hasil Prediksi Suhu Udara</h1>
+
+        {% if prediksi %}
+        <div class="result">
+            <h3>Prediksi Suhu Udara untuk Besok:</h3>
+            <p class="value">{{ prediksi }} °C</p>
+            <p class="info">Berdasarkan suhu hari ini: <b>{{ input_user }} °C</b></p>
+        </div>
+
+        <div class="plot-container">
+            <h3>📈 Grafik Suhu Aktual vs Prediksi Hari Berikutnya</h3>
+            <img src="{{ plot_url }}" alt="Grafik Prediksi" class="plot-img">
+        </div>
+        {% endif %}
+
+        <div class="actions">
+            <a href="{{ url_for('home') }}" class="btn">🔙 Kembali ke Halaman Utama</a>
+        </div>
+    </div>
+</body>
+</html>
